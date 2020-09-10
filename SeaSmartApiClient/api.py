@@ -4,7 +4,7 @@ import requests
 
 from .error import SeaSmartError
 
-BASE_URL = 'http://api.seasmart.no'
+BASE_URL = 'http://api.seasmart.no/v1/'
 
 DEFAULT_API_TIMEOUT = 16
 
