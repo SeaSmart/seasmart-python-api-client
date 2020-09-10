@@ -33,7 +33,7 @@ class TestSeaSmartAPI(TestCase):
             cages_url = '{}/cages'.format(BASE_URL)
             mock_request.get.assert_any_call(cages_url, headers=self.api._authentication_headers, timeout=5)
 
-        # error case (survey not found)
+        # error case (not found)
         with mock.patch('SeaSmartApiClient.api.requests') as mock_request:
             mock_get = mock.Mock()
             mock_get.status_code = 404

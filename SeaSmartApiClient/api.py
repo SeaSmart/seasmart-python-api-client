@@ -44,3 +44,30 @@ class SeaSmartApiClient(object):
                 )
             )
         return cages_response.json()
+
+    def get_cage(self, external_id, start=None, end=None):
+        '''
+        Gets information about the user's cages
+        '''
+        self.check_auth_headers()
+        params = ''
+        if start is not None or end is not None:
+            params = '?'
+        if start is not None:
+            params = params + 'start={}&'.format(start)
+        if end is not None:
+            params = params + 'end={}&'.format(end)
+        params = params[:-1]  # remove trailing ambersand
+
+        cage_url = '{}/cage/{}/{}'.format(self.url, external_id, params)
+        cage_response = requests.get(cage_url, headers=self._authentication_headers, timeout=self.timeout)
+        if cage_response.status_code != 200:
+            error = 'SeaSmart returned a non-200 response code'
+            raise SeaSmartError(
+                '{}: {} and error {}'.format(
+                    error,
+                    cage_response.status_code,
+                    cage_response.text
+                )
+            )
+        return cage_response.json()
