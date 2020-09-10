@@ -6,7 +6,7 @@ This is an open source python project for using the SeaSmart API.
 
 This repository is maintained by
 
-1. [Bradley Wogsland](@wogsland)
+1. [Bradley Wogsland](https://github.com/wogsland)
 
 ### Community Guidelines
 
