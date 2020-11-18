@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="seasmart-python-api-client",
-    version="0.1.3",
+    version="0.1.4",
     author="Bradley Wogsland",
     author_email="bradley@wogsland.org",
     description="A Python client for the SeaSmart API.",

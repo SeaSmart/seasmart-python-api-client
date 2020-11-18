@@ -52,7 +52,7 @@ The release can be done completely on the command line. First make sure the vers
 
     git commit -am "feature(s) for this release"
     git push origin dev
-    git tag -a 0.1.0 -m "Initial release with minimal functionality used by PopResearch"
+    git tag -a 0.1.0 -m "Initial release with minimal functionality"
     git push origin 0.1.0
     python3 -m pip install --user --upgrade setuptools wheel
     python3 setup.py sdist bdist_wheel
